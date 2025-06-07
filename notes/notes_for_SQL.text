@@ -28,6 +28,12 @@ create table id(
     gender varchar(1) // 最后一个无逗号
     )comment '用户表';
 
+select * from mysql.user; // 查看所有在mysql.user中的数据
+
+create table t1 select host,user from mysql.user; // 复制所有数据到t1
+
+create table t2 select host,user from mysql.user where 1 > 5; // 仅复制表结构
+
 tinyint 1byte
 smallint 2byte
 mediumint 3byte
@@ -46,12 +52,8 @@ alter table id_table
 alter table id_table
     change Height height int; //修改名称和类型能够同时进行
 
-select * from mysql.user; // 查看所有在mysql.user中的数据
 
-create table t1 select host,user from mysql.user; // 复制所有数据到t1
 
-create table t2 select host,user from mysql.user where 1 > 5; // 仅复制表结构
-create table t3 like mysql.user; // 仅复制表结构
 
 
 
