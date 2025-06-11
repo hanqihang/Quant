@@ -44,7 +44,7 @@ float
 double
 decimal
 
-精度是整个数字的长度，标度是小数部分长度
+M精度是整个数字的长度，D标度是小数部分长度
 
 
 alter table id_table
@@ -52,8 +52,9 @@ alter table id_table
 alter table id_table
     change Height height int; //修改名称和类型能够同时进行
 
+// 默认都是有符号的
+create table t2(x tinyint unsigned);
 
-
-
+float[M, D] m最大为255, d最大值为30
 
 
